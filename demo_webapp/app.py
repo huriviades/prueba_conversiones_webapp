@@ -4,6 +4,10 @@ from utils.utils import obtener_conversiones, crear_conversion
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'  # Necesaria para usar flash messages
 
+@app.route('/', methods=['GET'], strict_slashes=False)
+def index():
+    return render_template('index.html')
+
 @app.route('/temperaturas/', methods=['GET'], strict_slashes=False)
 def get_temperaturas():
     conversiones = obtener_conversiones()
