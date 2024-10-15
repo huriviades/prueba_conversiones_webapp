@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Conversión</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Crear Nueva Conversión</h1>
+        <form method="POST">
+            <label for="resultado">Resultado</label>
+            <input type="text" id="resultado" name="resultado" required>
+            
+            <label for="tipo">Tipo de conversión</label>
+            <input type="text" id="tipo" name="tipo" required>
+
+            <!-- Contenedor para los botones alineados -->
+            <div class="buttons">
+                <button type="submit" class="btn">Crear</button>
+                <a href="{{ url_for('get_temperaturas') }}" class="btn">Ver conversiones</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

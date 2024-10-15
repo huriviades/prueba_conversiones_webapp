@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversiones de Temperatura</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Conversiones de Temperatura</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Resultado</th>
+                    <th>Tipo</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for conversion in conversiones %}
+                <tr>
+                    <td>{{ conversion.resultado }}</td>
+                    <td>{{ conversion.tipo }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Botón fuera del div contenedor de la tabla -->
+    <div class="container">
+        <a href="{{ url_for('create_temperatura') }}" class="btn" style="margin-top: 20px;">Crear nueva conversión</a>
+    </div>
+</body>
+</html>
+
