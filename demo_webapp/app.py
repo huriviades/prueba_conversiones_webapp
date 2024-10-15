@@ -16,9 +16,9 @@ def get_temperaturas():
 @app.route('/temperaturas/crear/', methods=['GET', 'POST'], strict_slashes=False)
 def create_temperatura():
     if request.method == 'POST':
-        resultado = request.form['resultado']
-        tipo = request.form['tipo']
-        exito = crear_conversion(resultado, tipo)
+        temperatura = request.form['temperatura']  # Obtener temperatura del formulario
+        tipo = request.form['tipo']  # Obtener tipo de conversión del formulario
+        exito = crear_conversion(temperatura, tipo)  # Llamar a crear_conversion
         if exito:
             flash('Conversión creada exitosamente', 'success')
             return redirect(url_for('get_temperaturas'))
