@@ -40,7 +40,7 @@ form input[type="text"] {
 
 .buttons {
     display: flex;
-    gap: 10px;  /* Espacio entre los botones */
+    gap: 10px;
     margin-top: 20px;
 }
 
@@ -59,3 +59,45 @@ form input[type="text"] {
     background-color: #0056b3;
 }
 
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Estilos para los enlaces en la página de inicio */
+.container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.container ul li {
+    margin-bottom: 10px;
+}
+
+.container ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.container ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Ajuste para el botón fuera del contenedor de la tabla */
+.container .btn {
+    display: inline-block;
+    margin-top: 20px;
+}
