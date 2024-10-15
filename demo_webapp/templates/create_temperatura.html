@@ -3,23 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Conversión</title>
+    <title>Crear Conversión de Temperatura</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1>Crear Nueva Conversión</h1>
-        <form method="POST">
-            <label for="resultado">Resultado</label>
-            <input type="text" id="resultado" name="resultado" required>
+        <h1>Crear Nueva Conversión de Temperatura</h1>
+        <form method="POST" action="{{ url_for('create_temperatura') }}">
+            <div class="form-group">
+                <label for="resultado">Resultado</label>
+                <input type="number" id="resultado" name="resultado" required aria-required="true" step="0.01">
+            </div>
             
-            <label for="tipo">Tipo de conversión</label>
-            <input type="text" id="tipo" name="tipo" required>
-
-            <!-- Contenedor para los botones alineados -->
+            <div class="form-group">
+                <label for="tipo">Tipo de conversión</label>
+                <select id="tipo" name="tipo" required aria-required="true">
+                    <option value="">Seleccione un tipo</option>
+                    <option value="celsius_a_fahrenheit">Celsius a Fahrenheit</option>
+                    <option value="fahrenheit_a_celsius">Fahrenheit a Celsius</option>
+                </select>
+            </div>
+            
             <div class="buttons">
                 <button type="submit" class="btn">Crear</button>
                 <a href="{{ url_for('get_temperaturas') }}" class="btn">Ver conversiones</a>
+                <a href="{{ url_for('index') }}" class="btn">Volver al inicio</a>
             </div>
         </form>
     </div>

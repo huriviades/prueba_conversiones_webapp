@@ -3,17 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo de WebApp</title>
+    <title>Demo de Convertidor de Temperatura</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1>Demo de WebApp</h1>
-        <p>Bienvenido a la demo de la aplicación de conversiones de temperatura.</p>
-        <ul>
-            <li><a href="{{ url_for('get_temperaturas') }}">Ver conversiones de temperatura</a></li>
-            <li><a href="{{ url_for('create_temperatura') }}">Crear nueva conversión de temperatura</a></li>
-        </ul>
+        <header>
+            <h1>Demo de Convertidor de Temperatura</h1>
+        </header>
+        <main>
+            <p>Bienvenido a la demo de la aplicación de conversiones de temperatura.</p>
+            <nav>
+                <h2>Opciones disponibles:</h2>
+                <ul>
+                    <li><a href="{{ url_for('get_temperaturas') }}" class="btn">Ver conversiones de temperatura</a></li>
+                    <li><a href="{{ url_for('create_temperatura') }}" class="btn">Crear nueva conversión de temperatura</a></li>
+                </ul>
+            </nav>
+        </main>
+        <footer>
+            <p>&copy; 2023 Demo de Convertidor de Temperatura. Todos los derechos reservados.</p>
+        </footer>
     </div>
 </body>
 </html>
