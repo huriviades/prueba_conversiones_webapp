@@ -1,7 +1,7 @@
 import requests
 from utils.formulas import celsius_a_fahrenheit, fahrenheit_a_celsius
 
-API_URL = "http://172.40.0.20:80/api/conversiones/temperatura"
+API_URL = "http://172.30.0.20:80/api/conversiones/temperatura"
 
 def obtener_conversiones():
     try:
